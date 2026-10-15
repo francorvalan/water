@@ -11,9 +11,9 @@ execute:
 params:
   poligono: "aoi.geojson"
   desde: "2016-02-08"
-  hasta: "2016-02-08"
-  ids: "LC08_L2SP_232083_20160209_20200907_02_T1"
-  destino: "../inst/extdata/L8"
+  hasta: "2016-02-10"
+  ids: 'LC08_L1TP_232083_20160209_20200907_02_T1'
+  destino: "../../L8_USGS"
 ---
 
 ## Uso
@@ -70,10 +70,10 @@ library(dplyr)
 desde="2016-02-08" %>% as.Date()
 hasta="2016-02-10" %>% as.Date()
 destino="../inst/extdata/L8"
-params <- list()
-params$destino[[1]]<- "../inst/extdata/L8"
+#params <- list()
+#params$destino[[1]]<- "../inst/extdata/L8"
 params
-params$destino <- "../inst/extdata/L8"
+#params$destino <- "../inst/extdata/L8"
 desde <- as.Date(params$desde)
 hasta <- as.Date(params$hasta)
 stopifnot(!is.na(desde), !is.na(hasta), desde <= hasta)
